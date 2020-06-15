@@ -1,0 +1,26 @@
+{
+  "name": "unbunbot",
+  "version": "1.0.0",
+  "description": "A simple discord bot made with discord.js, nodejs and MySQL ;)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssoraa/unbunBot.git"
+  },
+  "keywords": [
+    "discord.js",
+    "discord",
+    "bot",
+    "mysql",
+    "nodejs"
+  ],
+  "author": "Sora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssoraa/unbunBot/issues"
+  },
+  "homepage": "https://github.com/ssoraa/unbunBot#readme"
+}
