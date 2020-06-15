@@ -1,3 +1,7 @@
+# Settings
+settings/configurations.js
+settings/credentials.js
+
 # Logs
 logs
 *.log
@@ -102,7 +106,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-# Settings
-settings/configurations.js
-settings/credentials.js
