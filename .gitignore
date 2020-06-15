@@ -105,6 +105,4 @@ dist
 
 # Settings
 settings/configurations.js
-settings/configurations
 settings/credentials.js
-settings/credentials
