@@ -18,7 +18,7 @@ client.aliases = new Collection();
  * @param options{Object}
  * @returns {Promise<void>}
  */
-init = async (options) => {
+init = async () => {
     await require('./utils/database')({
         client: client
     }).then(async () => {
@@ -31,10 +31,5 @@ init = async (options) => {
 };
 
 (async () => {
-    await init({
-        loadEvents: true,
-        loadCommands: true,
-        connectDatabase: true,
-        connectDatabaseFirst: true
-    });
+    await init();
 })();
