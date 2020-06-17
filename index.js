@@ -9,6 +9,9 @@ client.logger = require('./utils/logger').log;
 client.Tools = new Tools({
     client: client
 });
+client.commands = new Collection();
+client.aliases = new Collection();
+
 /**
  * @author Sora
  * @param options{Object}
@@ -17,8 +20,13 @@ client.Tools = new Tools({
 init = async (options) => {
     await require('./utils/database')({
         client: client
-    })
-    await client.login(client.credentials.base.token)
+    }).then(async () => {
+        await require('./handlers/Events')({
+            client: client,
+            path: "./events/"
+        })
+        await client.login(client.credentials.base.token)
+    });
 };
 
 (async () => {
