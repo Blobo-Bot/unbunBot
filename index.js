@@ -9,6 +9,7 @@ client.logger = require('./utils/logger').log;
 client.Tools = new Tools({
     client: client
 });
+client.methods = require('./handlers/Methods');
 client.commands = new Collection();
 client.aliases = new Collection();
 
