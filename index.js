@@ -15,7 +15,6 @@ client.aliases = new Collection();
 
 /**
  * @author Sora
- * @param options{Object}
  * @returns {Promise<void>}
  */
 init = async () => {
