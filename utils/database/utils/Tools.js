@@ -7,8 +7,8 @@ module.exports = class Tools {
     createURL() {
         return new Promise((resolve, reject) => {
             try {
-                if (!this.configuration.usePass) return resolve(`mysql://${this.configuration.database.user}@${this.configuration.database.host}:3306/${this.configuration.database.database}`);
-                return resolve(`mysql://${this.configuration.database.user}:${this.configuration.database.password[0]}@${this.configuration.database.host}:3306/${this.configuration.database.database}`);
+                if (!this.configuration.usePassword) return resolve(`mysql://${this.configuration.user}@${this.configuration.host}:3306/${this.configuration.database}`);
+                return resolve(`mysql://${this.configuration.user}:${this.configuration.password[0]}@${this.configuration.host}:3306/${this.configuration.database}`);
             } catch (O_o) {
                 reject(O_o);
             }
