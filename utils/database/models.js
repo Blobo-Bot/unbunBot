@@ -1,4 +1,8 @@
-module.exports = async (options) => {
+/**
+ * @param options
+ * @returns {Promise<{[p: string]: ModelCtor<Model>}|typeof Model[]>}
+ */
+module.exports = async (options = Object) => {
     /** MODELS */
     try  {
         options.database.define('guild', {

@@ -1,9 +1,24 @@
+/**
+ * @type {Tools}
+ */
 module.exports = class Tools {
+    /**
+     * @param options
+     */
     constructor(options = Object) {
+        /**
+         * @type {Client | ObjectConstructor}
+         */
         this.client = options.client;
+        /**
+         * @type {{password: string, database: string, usePassword: boolean, host: string, user: string}}
+         */
         this.configuration = this.client.credentials.database;
     };
 
+    /**
+     * @returns {Promise<unknown>}
+     */
     createURL() {
         return new Promise((resolve, reject) => {
             try {

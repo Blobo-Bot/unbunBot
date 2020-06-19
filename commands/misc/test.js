@@ -13,6 +13,5 @@ module.exports.command = {
     args: false,
     cooldown: 5,
     unsafe: false,
-    permLevel: 1,
-    guildOnly: false
+    permLevel: 1
 };

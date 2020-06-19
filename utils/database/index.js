@@ -1,4 +1,8 @@
-const Sequelize = require('sequelize');
+const Sequelize = require('sequelize');/**
+
+ * @param options
+ * @returns {Promise<void>}
+ */
 module.exports = async (options = Object) => {
     let URL = await options.client.Tools.createURL();
     options.client.database = new Sequelize(URL, {
