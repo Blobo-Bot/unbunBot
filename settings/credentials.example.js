@@ -7,6 +7,7 @@ module.exports = {
         user: '',
         host: '',
         usePassword: false, /** true / false */
-        password: ''
+        password: '',
+        database: ''
     }
 };

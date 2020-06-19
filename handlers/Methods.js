@@ -5,7 +5,7 @@ const {resolve} = require('path');
  * @param method
  * @param args
  */
-module.exports.exec = (method, ...args) => {
+module.exports.use = (method, ...args) => {
     let methodPath = resolve('./methods/', method);
     let returnedMethod = require(methodPath);
     returnedMethod(...args);

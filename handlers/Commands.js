@@ -16,15 +16,7 @@ module.exports = async (options) => {
                 if (e) console.log(e);
                 for (const element of js_files) {
                     let props = require(resolve(options.path + folder + '/' + element ));
-                    options.client.logger(`Loading Command: ${element.split('.')[0]} of ${folder} module`)
-
-                    if (process.stdout.moveCursor) {
-                        process.stdout.moveCursor(0, -1);
-                    }
-                    if (process.stdout.clearLine) {
-                        process.stdout.clearLine();
-                    }
-
+                    options.client.logger(`Loading Command: ${element.split('.')[0]} of ${folder} module`, 'cmd')
                     options.client.commands.set(element.split('.')[0], props);
                     if (props.command && props.command.aliases) {
                         for (let alias of props.command.aliases){

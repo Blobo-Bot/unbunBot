@@ -17,12 +17,6 @@ module.exports = async (options) => {
                 for (const element of js_files) {
                     let props = require(resolve(''+options.path+'' + folder + '/' + element));
                     options.client.logger(`Loading Event: ${element.split('.')[0]}`, 'log')
-                    if (process.stdout.moveCursor) {
-                        process.stdout.moveCursor(0, -1);
-                    }
-                    if (process.stdout.clearLine) {
-                        process.stdout.clearLine();
-                    }
                     options.client.on(element.split('.')[0], props.bind(null, options.client));
                 }
             });

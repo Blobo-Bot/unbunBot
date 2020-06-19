@@ -10,6 +10,7 @@ client.Tools = new Tools({
     client: client
 });
 client.methods = require('./handlers/Methods');
+client.monitors = require('./handlers/Monitors');
 client.commands = new Collection();
 client.aliases = new Collection();
 
@@ -24,7 +25,11 @@ init = async () => {
         await require('./handlers/Events')({
             client: client,
             path: "./events/"
-        })
+        });
+        await require('./handlers/Commands')({
+           client: client,
+           path: "./commands/"
+        });
         await client.login(client.credentials.base.token)
     });
 };

@@ -20,7 +20,7 @@ exports.log = (content, type = "log") => {
             return console.log(`${timestamp} ${chalk.green(type.toUpperCase())} ${content} `);
         }
         case "cmd": {
-            return console.log(`${timestamp} ${chalk.black.white(type.toUpperCase())} ${content}`);
+            return console.log(`${timestamp} ${chalk.blue(type.toUpperCase())} ${content}`);
         }
         case "ready": {
             return console.log(`${timestamp} ${chalk.black.green(type.toUpperCase())} ${content}`);
